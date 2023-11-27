@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Roots from './Roots/Roots';
+import Home from './Components/Pages/Home/Home';
 
 
 const router = createBrowserRouter([
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <h1>Home vista</h1>
+        element: <Home></Home>
       }
     ]
   },
@@ -25,6 +26,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <div className='w-full mx-auto'>
+      <RouterProvider router={router}></RouterProvider>
+    </div>
   </React.StrictMode>,
 )
