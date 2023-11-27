@@ -4,13 +4,14 @@ import { updateProfile } from "firebase/auth";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
+import useAuth from "../../hooks/useAuth";
 
 const image_Hosting_key = 'eec4232453de02c7130df9275dc373bd';
 const image_HOSTING_api = `https://api.imgbb.com/1/upload?key=${image_Hosting_key}`;
 
 const Register = () => {
 
-    const { createUser, user } = useContext(AuthContext);
+    const { createUser, user } = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
 
