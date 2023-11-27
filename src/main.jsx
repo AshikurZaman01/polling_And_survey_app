@@ -10,15 +10,17 @@ import {
 import Roots from './Roots/Roots';
 import Home from './Components/Pages/Home/Home';
 import AuthProvider from './Components/Auth/AuthProvider';
+import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Roots></Roots>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home></Home>
       }
     ]
