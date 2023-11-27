@@ -11,6 +11,8 @@ const Navbar = () => {
     const navigate = useNavigate()
     const { user, logout } = useContext(AuthContext)
 
+
+
     const [click, setClick] = useState(false);
 
     const handleClick = () => {

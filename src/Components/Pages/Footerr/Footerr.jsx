@@ -6,7 +6,7 @@ const Footerr = () => {
             <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="lg:flex lg:items-start lg:gap-8">
                     <div className="text-teal-600">
-                        <div><h1 className='text-2xl font-bold'>PollPilot</h1></div>
+                        <div><h1 className='text-4xl font-bold'>PollPilot</h1></div>
                     </div>
 
                     <div
@@ -302,7 +302,7 @@ const Footerr = () => {
                 <div className="mt-8 border-t border-gray-100 pt-8">
                     <div className="sm:flex sm:justify-between">
                         <p className="text-xs text-slate-400">
-                            &copy; 2022. <span className='font-bold'>PollPilot</span>. All rights reserved.
+                            &copy; 2022. <span className='font-bold '>PollPilot</span>. All rights reserved.
                         </p>
 
                         <ul
