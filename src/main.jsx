@@ -11,6 +11,8 @@ import Roots from './Roots/Roots';
 import Home from './Components/Pages/Home/Home';
 import AuthProvider from './Components/Auth/AuthProvider';
 import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
+import Login from './Components/Pages/LoginAndRegister/Login';
+import Register from './Components/Pages/LoginAndRegister/Register';
 
 
 const router = createBrowserRouter([
@@ -25,6 +27,15 @@ const router = createBrowserRouter([
       }
     ]
   },
+
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/register",
+    element: <Register></Register>,
+  }
 ]);
 
 
