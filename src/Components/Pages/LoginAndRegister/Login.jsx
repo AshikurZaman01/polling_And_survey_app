@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import CommonLogin from './CommonLogin';
 
 const Login = () => {
 
@@ -79,9 +80,12 @@ const Login = () => {
                         <button type="submit" className="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
 
                         <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer"><Link to={'/register'}>Already have an account ?<strong>Login</strong></Link> </span>
+                        <CommonLogin></CommonLogin>
                     </form>
                 </div>
             </div>
+
+
         </div>
     );
 };

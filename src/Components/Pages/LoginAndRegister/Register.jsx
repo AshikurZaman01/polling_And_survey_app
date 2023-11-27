@@ -5,6 +5,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import useAuth from "../../hooks/useAuth";
+import CommonLogin from "./CommonLogin";
 
 const image_Hosting_key = 'eec4232453de02c7130df9275dc373bd';
 const image_HOSTING_api = `https://api.imgbb.com/1/upload?key=${image_Hosting_key}`;
@@ -125,6 +126,7 @@ const Register = () => {
 
                         <button type="submit" className="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Register</button>
                         <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer"><Link to={'/login'}>Already have an account ?<strong>Login</strong></Link> </span>
+                        <CommonLogin></CommonLogin>
                     </form>
 
                 </div>
