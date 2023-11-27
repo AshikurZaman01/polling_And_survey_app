@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
     const listItems = (
-        <div className='lg:hidden z-50 block absolute top-16 left-0 right-0 bg-slate-800'>
+        <div className='lg:hidden z-50 block absolute top-16 left-0 right-0 bg-amber-950'>
             <ul className='text-center text-xl p-20'>
 
                 <NavLink to='/'>
@@ -66,10 +66,10 @@ const Navbar = () => {
     return (
         <div>
             <nav>
-                <div className='flex h-[10vh] items-center justify-between z-50 lg:py-5 px-10 py-4 flex-1 bg-slate-900 text-white'>
+                <div className='flex h-[10vh] items-center justify-between z-50 lg:py-5 px-10 py-4 flex-1 bg-amber-950 text-white'>
                     <div className='flex items-center flex-1'>
                         <Link to={'/'}>
-                            <span className='text-3xl font-bold'>OpinioVista</span>
+                            <span className='text-3xl font-bold '>PollPilot</span>
                         </Link>
                     </div>
 
