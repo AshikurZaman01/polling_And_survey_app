@@ -1,3 +1,4 @@
+import FAQs from "../FAQs/FAQs";
 import MakeYourAudience from "../MakeYourAudience/MakeYourAudience";
 import Testimonials from "../Testimonials/Testimonials";
 import Banner from "./Banner";
@@ -10,11 +11,15 @@ const Home = () => {
             </div>
 
             <div>
+                <Testimonials></Testimonials>
+            </div>
+
+            <div>
                 <MakeYourAudience></MakeYourAudience>
             </div>
 
             <div>
-                <Testimonials></Testimonials>
+                <FAQs></FAQs>
             </div>
         </div>
     );
