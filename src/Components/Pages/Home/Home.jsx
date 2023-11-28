@@ -3,6 +3,7 @@ import MakeYourAudience from "../MakeYourAudience/MakeYourAudience";
 import Testimonials from "../Testimonials/Testimonials";
 import Banner from "./Banner";
 import FeaturedSurvey from "./FeaturedSurvey/FeaturedSurvey";
+import LatestSurveys from "./FeaturedSurvey/LatestSurveys";
 
 const Home = () => {
     return (
@@ -13,6 +14,10 @@ const Home = () => {
 
             <div>
                 <FeaturedSurvey></FeaturedSurvey>
+            </div>
+
+            <div>
+                <LatestSurveys></LatestSurveys>
             </div>
 
             <div>

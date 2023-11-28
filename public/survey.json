@@ -98,5 +98,15 @@
         "like": 950,
         "dislike": 40,
         "date": "2021-11-28"
+    },
+    {
+        "id": 11,
+        "title": "Running Habits",
+        "short_secs": "How often do you exercise in a week?",
+        "category": "Health and Wellness",
+        "description": "Share your weekly exercise routine and learn about others' fitness habits.",
+        "like": 600,
+        "dislike": 100,
+        "date": "2024-1-28"
     }
 ]
