@@ -22,7 +22,7 @@ const LatestSurveys = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center text-4xl font-bold my-[100px]">Latest Surveys</h1>
+                <h1 className="text-center text-5xl font-bold my-[100px]">Latest Surveys</h1>
             </div>
 
             <div>

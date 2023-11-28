@@ -1,4 +1,5 @@
 import FAQs from "../FAQs/FAQs";
+import HowItWorks from "../HowItWorks/HowItWorks";
 import MakeYourAudience from "../MakeYourAudience/MakeYourAudience";
 import Testimonials from "../Testimonials/Testimonials";
 import Banner from "./Banner";
@@ -18,6 +19,10 @@ const Home = () => {
 
             <div>
                 <LatestSurveys></LatestSurveys>
+            </div>
+
+            <div>
+                <HowItWorks></HowItWorks>
             </div>
 
             <div>

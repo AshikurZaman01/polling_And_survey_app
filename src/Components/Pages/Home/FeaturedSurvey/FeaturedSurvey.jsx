@@ -16,7 +16,7 @@ const FeaturedSurvey = () => {
     return (
         <div className="w-[95%] mx-auto">
             <div>
-                <h1 className="text-center text-4xl font-bold my-10">Featured Survey</h1>
+                <h1 className="text-center text-5xl font-bold my-10">Featured Survey</h1>
             </div>
 
             <div>
