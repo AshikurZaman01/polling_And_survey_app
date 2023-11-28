@@ -6,6 +6,7 @@ const Survey = () => {
     const [ascending, setAscending] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
+    const [latestPost, setLatestPost] = useState(null);
 
     useEffect(() => {
         fetch('survey.json')
@@ -14,7 +15,39 @@ const Survey = () => {
             .catch(err => console.log(err))
     }, [])
 
-    const sortSurveys = () => {
+    useEffect(() => {
+        const latestPostDate = surveys.reduce((latestDate, survey) => {
+            if (survey.date) {
+                const currentDate = new Date(survey.date);
+                return currentDate > latestDate ? currentDate : latestDate;
+            }
+            return latestDate;
+        }, new Date(0));
+
+        const currentDate = new Date();
+        const timeDifference = latestPostDate - currentDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        setLatestPost(daysDifference);
+    }, [surveys]);
+
+    const sortSurveysByDate = () => {
+        const sortedSurveys = [...surveys];
+        sortedSurveys.sort((a, b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+
+            if (ascending) {
+                return dateA - dateB;
+            } else {
+                return dateB - dateA;
+            }
+        });
+        setSurveys(sortedSurveys);
+        setAscending(!ascending);
+    };
+
+    const sortSurveysByLikes = () => {
         const sortedSurveys = [...surveys];
         sortedSurveys.sort((a, b) => {
             if (ascending) {
@@ -49,7 +82,6 @@ const Survey = () => {
             </div>
 
             <div className="flex justify-center mb-4">
-
                 <input
                     type="text"
                     placeholder="Search by title"
@@ -71,14 +103,16 @@ const Survey = () => {
                     ))}
                 </select>
 
-                <button className="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2" onClick={sortSurveys}>
-                    {ascending ? "Sort Ascending" : "Sort Descending"}
+                <button className="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mr-2" onClick={sortSurveysByLikes}>
+                    {ascending ? "Sort Ascending by Likes" : "Sort Descending by Likes"}
                 </button>
 
-
+                <button className="ml-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4" onClick={sortSurveysByDate}>
+                    {ascending ? "Old Post" : "Latest Post"}
+                </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
                 {filteredSurveys.map(survey => (
                     <SurveyCard survey={survey} key={survey.id}></SurveyCard>
                 ))}

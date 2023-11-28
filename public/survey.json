@@ -7,7 +7,7 @@
         "description": "Share your favorite movie genre and see how it compares to others.",
         "like": 1200,
         "dislike": 150,
-        "date": "2023-11-28"
+        "date": "2023-9-28"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "description": "Express your enthusiasm for the latest technological advancements.",
         "like": 850,
         "dislike": 70,
-        "date": "2023-11-28"
+        "date": "2023-8-28"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "description": "Share your weekly exercise routine and learn about others' fitness habits.",
         "like": 600,
         "dislike": 100,
-        "date": "2023-11-28"
+        "date": "2023-1-28"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "description": "Voice your concerns about environmental issues and explore common perspectives.",
         "like": 900,
         "dislike": 120,
-        "date": "2023-11-28"
+        "date": "2023-12-28"
     },
     {
         "id": 5,
@@ -47,7 +47,7 @@
         "description": "Share your experiences with remote work and gauge overall satisfaction.",
         "like": 1100,
         "dislike": 80,
-        "date": "2023-11-28"
+        "date": "2023-1-28"
     },
     {
         "id": 6,
@@ -67,7 +67,7 @@
         "description": "Share your social media habits and see how they compare to others.",
         "like": 500,
         "dislike": 200,
-        "date": "2023-11-28"
+        "date": "2023-7-28"
     },
     {
         "id": 8,
@@ -77,7 +77,7 @@
         "description": "Discuss your reading habits and explore a variety of book consumption patterns.",
         "like": 680,
         "dislike": 60,
-        "date": "2023-11-28"
+        "date": "2023-3-28"
     },
     {
         "id": 9,

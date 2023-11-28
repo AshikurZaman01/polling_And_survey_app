@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SurveyCard from "../../Survey/SurveyCard";
+import { Link } from "react-router-dom";
 
 const FeaturedSurvey = () => {
 
@@ -19,14 +20,18 @@ const FeaturedSurvey = () => {
             </div>
 
             <div>
-                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
                     {
                         surveys.slice(0, 6).map(survey => <SurveyCard survey={survey} key={survey.id}></SurveyCard>)
                     }
                 </div>
             </div>
 
-
+            <div className="text-center">
+                <Link to={'/survey'}>
+                    <button className="btn btn-sm mt-6 bg-slate-900 w-[300px] text-white">More Survey</button>
+                </Link>
+            </div>
         </div>
     );
 };

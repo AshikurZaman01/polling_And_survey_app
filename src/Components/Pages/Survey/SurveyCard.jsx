@@ -8,7 +8,6 @@ const SurveyCard = ({ survey }) => {
     const { title, short_secs, description, like, dislike, date } = survey || {}
 
     const { user } = useAuth();
-    console.log(user)
 
     return (
         <div className="mx-auto w-[400px] border border-gray-400 m-5 rounded-lg shadow-md shadow-gray-500">
