@@ -18,9 +18,9 @@ const Survey = () => {
         const sortedSurveys = [...surveys];
         sortedSurveys.sort((a, b) => {
             if (ascending) {
-                return a.id - b.id;
+                return a.like - b.like;
             } else {
-                return b.id - a.id;
+                return b.like - a.like;
             }
         });
         setSurveys(sortedSurveys);

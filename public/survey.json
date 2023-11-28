@@ -6,7 +6,8 @@
         "category": "Entertainment",
         "description": "Share your favorite movie genre and see how it compares to others.",
         "like": 1200,
-        "dislike": 150
+        "dislike": 150,
+        "date": "2023-11-28"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "category": "Technology",
         "description": "Express your enthusiasm for the latest technological advancements.",
         "like": 850,
-        "dislike": 70
+        "dislike": 70,
+        "date": "2023-11-28"
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "category": "Health and Wellness",
         "description": "Share your weekly exercise routine and learn about others' fitness habits.",
         "like": 600,
-        "dislike": 100
+        "dislike": 100,
+        "date": "2023-11-28"
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "category": "Environment",
         "description": "Voice your concerns about environmental issues and explore common perspectives.",
         "like": 900,
-        "dislike": 120
+        "dislike": 120,
+        "date": "2023-11-28"
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "category": "Workplace",
         "description": "Share your experiences with remote work and gauge overall satisfaction.",
         "like": 1100,
-        "dislike": 80
+        "dislike": 80,
+        "date": "2023-11-28"
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "category": "Travel",
         "description": "Discuss your travel preferences and discover popular transportation choices.",
         "like": 750,
-        "dislike": 90
+        "dislike": 90,
+        "date": "2020-11-28"
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "category": "Technology",
         "description": "Share your social media habits and see how they compare to others.",
         "like": 500,
-        "dislike": 200
+        "dislike": 200,
+        "date": "2023-11-28"
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "category": "Hobbies",
         "description": "Discuss your reading habits and explore a variety of book consumption patterns.",
         "like": 680,
-        "dislike": 60
+        "dislike": 60,
+        "date": "2023-11-28"
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@
         "category": "Health and Wellness",
         "description": "Share insights into your dietary habits and learn about others' approaches to healthy eating.",
         "like": 800,
-        "dislike": 110
+        "dislike": 110,
+        "date": "2022-11-28"
     },
     {
         "id": 10,
@@ -87,6 +96,7 @@
         "category": "Entertainment",
         "description": "Discover and discuss music preferences to find common ground with fellow participants.",
         "like": 950,
-        "dislike": 40
+        "dislike": 40,
+        "date": "2021-11-28"
     }
 ]

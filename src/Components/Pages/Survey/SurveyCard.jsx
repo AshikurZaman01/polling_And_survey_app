@@ -5,7 +5,7 @@ import { AiFillDislike } from "react-icons/ai";
 const SurveyCard = ({ survey }) => {
 
 
-    const { title, short_secs, description, like, dislike } = survey || {}
+    const { title, short_secs, description, like, dislike, date } = survey || {}
 
     const { user } = useAuth();
     console.log(user)
@@ -22,9 +22,15 @@ const SurveyCard = ({ survey }) => {
                         <h3 className="py-2 text-xl">{short_secs}</h3>
                     </div>
 
-                    <div className="w-[40px] h-[40px] ">
-                        <img className="rounded-full" src={user?.photoURL} alt="" />
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[40px] h-[40px] ">
+                            <img className="rounded-full" src={user?.photoURL} alt="" />
+                        </div>
+                        <div>
+                            <p className="text-xs w-[60px]">{date}</p>
+                        </div>
                     </div>
+
                 </div>
 
                 <div className="flex justify-between gap-10 pt-5">
