@@ -13,6 +13,7 @@ import AuthProvider from './Components/Auth/AuthProvider';
 import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
 import Login from './Components/Pages/LoginAndRegister/Login';
 import Register from './Components/Pages/LoginAndRegister/Register';
+import Survey from './Components/Pages/Survey/Survey';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home></Home>
+      },
+      {
+        path: "/survey",
+        element: <Survey></Survey>
       }
     ]
   },

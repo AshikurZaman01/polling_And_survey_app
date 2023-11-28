@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import KeenSlider from 'keen-slider';
 import 'keen-slider/keen-slider.min.css';
+import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
+
 
 const Testimonials = () => {
 
@@ -147,14 +149,18 @@ const Testimonials = () => {
                                         </div>
 
                                         <div className="mt-4">
-
                                             <p className="mt-4 leading-relaxed text-gray-700">
                                                 PollPilot has revolutionized the way we gather insights. The platform's intuitive design and robust features make polling a breeze!
                                             </p>
+
                                         </div>
                                     </div>
 
-                                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                                    <footer className="flex items-center gap-7 mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                                        <Avatar className='rounded-full'>
+                                            <AvatarImage className='h-[40px] rounded-full' src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fHww" />
+                                            <AvatarFallback>CN</AvatarFallback>
+                                        </Avatar>
                                         &mdash; Sarah Thompson
                                     </footer>
                                 </blockquote>
@@ -223,16 +229,20 @@ const Testimonials = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                            
+
 
                                             <p className="mt-4 leading-relaxed text-gray-700">
-                                            Impressed by PollPilot's versatility! From employee feedback to customer opinions, it's a powerful tool for understanding diverse perspectives.
+                                                Impressed by PollPilot's versatility! From employee feedback to customer opinions, it's a powerful tool for understanding diverse perspectives.
                                             </p>
                                         </div>
                                     </div>
 
-                                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                                        &mdash;  Michael Chen
+                                    <footer className="flex items-center gap-7 mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                                        <Avatar className='rounded-full'>
+                                            <AvatarImage className='h-[40px] rounded-full' src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww" />
+                                            <AvatarFallback>CN</AvatarFallback>
+                                        </Avatar>
+                                        &mdash; SMichael Chen
                                     </footer>
                                 </blockquote>
                             </div>
@@ -300,14 +310,18 @@ const Testimonials = () => {
                                         </div>
 
                                         <div className="mt-4">
-                                           
+
                                             <p className="mt-4 leading-relaxed text-gray-700">
                                                 As a marketing professional, PollPilot's detailed analytics have been a game-changer for our campaigns. It's our go-to survey platform!
                                             </p>
                                         </div>
                                     </div>
 
-                                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                                    <footer className="flex items-center gap-7 mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                                        <Avatar className='rounded-full'>
+                                            <AvatarImage className='h-[40px] rounded-full' src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8fDB8fHww" />
+                                            <AvatarFallback>CN</AvatarFallback>
+                                        </Avatar>
                                         &mdash; Alex Rodriguez
                                     </footer>
                                 </blockquote>
@@ -383,7 +397,12 @@ const Testimonials = () => {
                                         </div>
                                     </div>
 
-                                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+
+                                    <footer className="flex items-center gap-7 mt-4 text-sm font-medium text-gray-700 sm:mt-6">
+                                        <Avatar className='rounded-full'>
+                                            <AvatarImage className='h-[40px] rounded-full' src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8fDB8fHww" />
+                                            <AvatarFallback>CN</AvatarFallback>
+                                        </Avatar>
                                         &mdash; Emily Davis
                                     </footer>
                                 </blockquote>

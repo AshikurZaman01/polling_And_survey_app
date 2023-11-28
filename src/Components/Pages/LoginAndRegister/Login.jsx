@@ -79,7 +79,7 @@ const Login = () => {
                         </div>
                         <button type="submit" className="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Login</button>
 
-                        <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer"><Link to={'/register'}>Already have an account ?<strong>Login</strong></Link> </span>
+                        <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer"><Link to={'/register'}>Already have an account ?<strong>Regsiter</strong></Link> </span>
                         <CommonLogin></CommonLogin>
                     </form>
                 </div>

@@ -36,6 +36,10 @@ const Navbar = () => {
                     <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Home</li>
                 </NavLink>
 
+                <NavLink to='/survey'>
+                    <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Survey</li>
+                </NavLink>
+
 
 
 
@@ -89,6 +93,19 @@ const Navbar = () => {
 
                                     }>
                                         HOME
+                                    </NavLink>
+                                </li>
+
+                                <li className=" md:my-0">
+                                    <NavLink to={'/survey'} className={({ isActive, isPending }) =>
+                                        isActive
+                                            ? "text-sm text-white underline duration-500"
+                                            : isPending
+                                                ? "pending"
+                                                : ""
+
+                                    }>
+                                        SURVEY
                                     </NavLink>
                                 </li>
 

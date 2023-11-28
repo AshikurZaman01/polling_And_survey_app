@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "title": "Favorite Movie Genre",
+        "short_secs": "What is your preferred movie genre?",
+        "category": "Entertainment",
+        "description": "Share your favorite movie genre and see how it compares to others.",
+        "like": 1200,
+        "dislike": 150
+    },
+    {
+        "id": 2,
+        "title": "Technology Trends",
+        "short_secs": "Which emerging technology excites you the most?",
+        "category": "Technology",
+        "description": "Express your enthusiasm for the latest technological advancements.",
+        "like": 850,
+        "dislike": 70
+    },
+    {
+        "id": 3,
+        "title": "Fitness Habits",
+        "short_secs": "How often do you exercise in a week?",
+        "category": "Health and Wellness",
+        "description": "Share your weekly exercise routine and learn about others' fitness habits.",
+        "like": 600,
+        "dislike": 100
+    },
+    {
+        "id": 4,
+        "title": "Environmental Concerns",
+        "short_secs": "Which environmental issue concerns you the most?",
+        "category": "Environment",
+        "description": "Voice your concerns about environmental issues and explore common perspectives.",
+        "like": 900,
+        "dislike": 120
+    },
+    {
+        "id": 5,
+        "title": "Remote Work Experience",
+        "short_secs": "How satisfied are you with remote work?",
+        "category": "Workplace",
+        "description": "Share your experiences with remote work and gauge overall satisfaction.",
+        "like": 1100,
+        "dislike": 80
+    },
+    {
+        "id": 6,
+        "title": "Travel Preferences",
+        "short_secs": "What is your preferred mode of transportation when traveling?",
+        "category": "Travel",
+        "description": "Discuss your travel preferences and discover popular transportation choices.",
+        "like": 750,
+        "dislike": 90
+    },
+    {
+        "id": 7,
+        "title": "Social Media Usage",
+        "short_secs": "How many hours do you spend on social media daily?",
+        "category": "Technology",
+        "description": "Share your social media habits and see how they compare to others.",
+        "like": 500,
+        "dislike": 200
+    },
+    {
+        "id": 8,
+        "title": "Reading Habits",
+        "short_secs": "How many books do you read in a month?",
+        "category": "Hobbies",
+        "description": "Discuss your reading habits and explore a variety of book consumption patterns.",
+        "like": 680,
+        "dislike": 60
+    },
+    {
+        "id": 9,
+        "title": "Healthy Eating",
+        "short_secs": "How often do you include fruits and vegetables in your diet?",
+        "category": "Health and Wellness",
+        "description": "Share insights into your dietary habits and learn about others' approaches to healthy eating.",
+        "like": 800,
+        "dislike": 110
+    },
+    {
+        "id": 10,
+        "title": "Music Preferences",
+        "short_secs": "Which music genre do you enjoy the most?",
+        "category": "Entertainment",
+        "description": "Discover and discuss music preferences to find common ground with fellow participants.",
+        "like": 950,
+        "dislike": 40
+    }
+]
