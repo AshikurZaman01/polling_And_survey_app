@@ -1,13 +1,11 @@
 import useAuth from "../../hooks/useAuth";
 import { FcLike } from "react-icons/fc";
 import { AiFillDislike } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const SurveyCard = ({ survey }) => {
 
-    console.log(survey)
-
-
-    const { title, shortdescription, description, like, dislike, date, userName, userEmail, userPhoto } = survey || {}
+    const { _id, title, shortdescription, description, like, dislike, date, userName, userEmail, userPhoto } = survey || {}
 
     const { user } = useAuth();
 
@@ -34,18 +32,10 @@ const SurveyCard = ({ survey }) => {
 
                 </div>
 
-                <div className="flex justify-between gap-10 pt-5">
-                    <div>
-                        <button className="btn btn-sm bg-red-300">Like<FcLike />{like}</button>
-                    </div>
-
-                    <div>
-                        <button className="btn btn-sm bg-blue-400">Dislike<AiFillDislike />{dislike}</button>
-                    </div>
-                </div>
-
                 <div>
-                    <button className="btn btn-sm mt-5 mb-2 w-full btn-info">View Details</button>
+                    <Link to={`/surveyDetails/${_id}`}>
+                        <button className="btn btn-sm mt-5 mb-2 w-full btn-info">View Details</button>
+                    </Link>
                 </div>
 
             </div>

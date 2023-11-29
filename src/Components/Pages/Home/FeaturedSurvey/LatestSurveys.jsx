@@ -6,7 +6,7 @@ const LatestSurveys = () => {
     const [surveys, setSurveys] = useState([]);
 
     useEffect(() => {
-        fetch('survey.json')
+        fetch('http://localhost:3000/surveys')
             .then(res => res.json())
             .then(data => setSurveys(data))
             .catch(err => console.log(err))

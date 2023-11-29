@@ -26,6 +26,7 @@ import FeedbackByAdmin from './Components/Pages/Dashboard/Surveyor/FeedbackByAdm
 import SurveyResponseUsers from './Components/Pages/Dashboard/Surveyor/SurveyResponseUsers';
 import PrivateRoute from './Components/Auth/PrivateRoute';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import SurveyDetails from './Components/Pages/Survey/SurveyDetails';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path: "/survey",
         element: <Survey></Survey>
+      },
+      {
+        path: "/surveyDetails/:id",
+        element: <SurveyDetails></SurveyDetails>,
+        loader: ({ params }) => fetch(`http://localhost:3000/surveys/${params.id}`)
       },
       {
         path: "/learnMore",
