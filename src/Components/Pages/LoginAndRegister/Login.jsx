@@ -31,12 +31,15 @@ const Login = () => {
                 const loggedInUser = res.user;
                 console.log(loggedInUser)
                 navigate(location?.state ? location.state : '/');
+
             })
             .catch(err => {
                 toast.error('logg in failed..')
 
                 console.log(err);
             })
+        e.target.reset();
+
     }
 
     return (

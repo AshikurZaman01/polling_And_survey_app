@@ -66,6 +66,7 @@ const Register = () => {
                                         }, 2000);
                                         navigate(location?.state ? location.state : '/');
                                         console.log('user data save to d')
+
                                     }
                                 })
                             // create user add  
@@ -75,7 +76,7 @@ const Register = () => {
                             console.log(err);
                         });
                 })
-
+            e.target.reset();
         }
     }
 
