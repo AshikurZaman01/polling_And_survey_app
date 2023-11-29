@@ -20,6 +20,7 @@ const CommonLogin = () => {
                 const userInfo = {
                     name: res.user?.displayName,
                     email: res.user?.email,
+                    image: res.user?.photoURL,
                 }
                 axiosSec.post('/users', userInfo)
                     .then(res => {

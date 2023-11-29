@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
 
-    const isAdmin = false;
+    const isAdmin = true;
 
     return (
         <div className="flex">
@@ -12,9 +12,9 @@ const Dashboard = () => {
                 {
                     isAdmin ? <>{/* admin */}
                         <ul className="menu">
-                            <div><h1 className="text-white text-3xl text-center p-7">Admin Home</h1></div>
+                            <div><h1 className="text-white text-3xl uppercase text-center p-7">Admin Home</h1></div>
 
-                            <li className="text-white"><NavLink to={'/dashboard/manageUsers'} >Manage Users</NavLink></li>
+                            <li className="text-white"><NavLink to={'/dashboard/manageUsers'} >Manage Surveyor</NavLink></li>
 
                             <li className="text-white"><NavLink to={'/dashboard/surveyStatus'} >Survey Status</NavLink></li>
 
@@ -30,7 +30,7 @@ const Dashboard = () => {
                             {/* surveyers */}
 
                             <ul className="menu">
-                                <div><h1 className="text-white text-3xl text-center p-7">Surveyors Home</h1></div>
+                                <div><h1 className="text-white text-3xl uppercase text-center p-7">Surveyors Home</h1></div>
 
                                 <li className="text-white"><NavLink to={'/dashboard/addSurvey'} >Add Survey</NavLink></li>
 

@@ -54,6 +54,7 @@ const Register = () => {
                             const userInfo = {
                                 name: res.user?.displayName,
                                 email: res.user?.email,
+                                image: data.data.url,
                             }
                             axiosSecure.post("/users", userInfo)
                                 .then(res => {

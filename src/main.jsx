@@ -25,6 +25,7 @@ import FeedbackByUsers from './Components/Pages/Dashboard/Surveyor/FeedbackByUse
 import FeedbackByAdmin from './Components/Pages/Dashboard/Surveyor/FeedbackByAdmin';
 import SurveyResponseUsers from './Components/Pages/Dashboard/Surveyor/SurveyResponseUsers';
 import PrivateRoute from './Components/Auth/PrivateRoute';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 
 const router = createBrowserRouter([
@@ -97,14 +98,16 @@ const router = createBrowserRouter([
     ]
   }
 ]);
-
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className='w-full mx-auto'>
-      <AuthProvider>
-        <RouterProvider router={router}></RouterProvider>
-      </AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <RouterProvider router={router}></RouterProvider>
+        </AuthProvider>
+      </QueryClientProvider>
       <Toaster />
     </div>
   </React.StrictMode>,
