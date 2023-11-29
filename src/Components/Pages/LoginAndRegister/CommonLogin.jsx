@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const CommonLogin = () => {
 
@@ -8,16 +9,26 @@ const CommonLogin = () => {
 
     const location = useLocation()
     const navigate = useNavigate()
+    const axiosSec = useAxiosSecure();
 
     const handleGoogleLogin = () => {
         googleLogin()
             .then(res => {
                 console.log(res);
-                toast.success('Successfully logged in with Google!');
-                setTimeout(() => {
-                    toast.success('Welcome,', res.user.displayName);
-                }, 2000);
-                navigate(location?.state ? location.state : '/');
+
+
+                const userInfo = {
+                    name: res.user?.displayName,
+                    email: res.user?.email,
+                }
+                axiosSec.post('/users', userInfo)
+                    .then(res => {
+                        toast.success('Successfully logged in with Google!');
+                        setTimeout(() => {
+                            toast.success('Welcome,', res.user.displayName);
+                        }, 2000);
+                        navigate(location?.state ? location.state : '/');
+                    })
             })
             .catch(err => {
                 console.log(err);

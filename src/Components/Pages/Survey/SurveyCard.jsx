@@ -22,8 +22,8 @@ const SurveyCard = ({ survey }) => {
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
-                        <div className="w-[40px] h-[40px] ">
-                            <img className="rounded-full" src={user?.photoURL} alt="" />
+                        <div className="w-[40px] h-[35px] ">
+                            <img className="rounded-full w-full h-full" src={user?.photoURL} alt="" />
                         </div>
                         <div>
                             <p className="text-xs w-[60px]">{date}</p>

@@ -81,7 +81,7 @@ const Survey = () => {
                 <h1 className="text-center text-4xl font-bold my-10">All Surveys Here</h1>
             </div>
 
-            <div className="flex justify-center mb-4">
+            <div className="flex flex-col sm:flex-row md:flex-row justify-center mb-4">
                 <input
                     type="text"
                     placeholder="Search by title"

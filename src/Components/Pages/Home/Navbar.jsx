@@ -40,6 +40,14 @@ const Navbar = () => {
                     <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Survey</li>
                 </NavLink>
 
+                <NavLink to='/learnMore'>
+                    <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>How It Works</li>
+                </NavLink>
+
+                <NavLink to='/dashboard'>
+                    <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Dashboard</li>
+                </NavLink>
+
 
 
 
@@ -106,6 +114,32 @@ const Navbar = () => {
 
                                     }>
                                         SURVEY
+                                    </NavLink>
+                                </li>
+
+                                <li className=" md:my-0">
+                                    <NavLink to={'/learnMore'} className={({ isActive, isPending }) =>
+                                        isActive
+                                            ? "text-sm text-white underline duration-500"
+                                            : isPending
+                                                ? "pending"
+                                                : ""
+
+                                    }>
+                                        HOW IT WORKS
+                                    </NavLink>
+                                </li>
+
+                                <li className=" md:my-0">
+                                    <NavLink to={'/dashboard'} className={({ isActive, isPending }) =>
+                                        isActive
+                                            ? "text-sm text-white underline duration-500"
+                                            : isPending
+                                                ? "pending"
+                                                : ""
+
+                                    }>
+                                        DASHBOARD
                                     </NavLink>
                                 </li>
 
