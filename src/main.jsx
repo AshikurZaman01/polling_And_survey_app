@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: "/surveyDetails/:id",
         element: <PrivateRoute><SurveyDetails></SurveyDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/surveys/${params.id}`)
+        loader: ({ params }) => fetch(`https://server-theta-tan.vercel.app/surveys/${params.id}`)
       },
       {
         path: "/learnMore",
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/updateSurvey/:id",
         element: <UpdateSurveys></UpdateSurveys>,
-        loader: ({ params }) => fetch(`http://localhost:3000/surveys/${params.id}`)
+        loader: ({ params }) => fetch(`https://server-theta-tan.vercel.app/surveys/${params.id}`)
       },
       {
         path: "/dashboard/feedbackByUsers",

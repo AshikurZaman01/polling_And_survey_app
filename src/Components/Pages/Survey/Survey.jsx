@@ -9,7 +9,7 @@ const Survey = () => {
     const [latestPost, setLatestPost] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:3000/surveys')
+        fetch('https://server-theta-tan.vercel.app/surveys')
             .then(res => res.json())
             .then(data => setSurveys(data))
             .catch(err => console.log(err))

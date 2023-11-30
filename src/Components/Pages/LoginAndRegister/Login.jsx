@@ -30,7 +30,15 @@ const Login = () => {
                 }, 2000);
                 const loggedInUser = res.user;
                 console.log(loggedInUser)
-                navigate(location?.state ? location.state : '/');
+                const user = { email }
+                axios.post('https://server-theta-tan.vercel.app/jwt', user, { withCredentials: true })
+                    .then((res) => {
+                        console.log(res.data);
+                        if (res.data.success) {
+                            navigate(location?.state ? location.state : '/');
+                        }
+
+                    })
 
             })
             .catch(err => {
