@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import SurveyCard from "../../Survey/SurveyCard";
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const LatestSurveys = () => {
     const [surveys, setSurveys] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:3000/surveys')
-            .then(res => res.json())
-            .then(data => setSurveys(data))
-            .catch(err => console.log(err))
-    }, []);
-
-    // Sort surveys by date in descending order
+    const axiosSec = useAxiosSecure();
+    axiosSec.get('/surveys')
+        .then(res => {
+            setSurveys(res.data);
+            console.log(res.data);
+        })
     const sortedSurveys = surveys.slice().sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);

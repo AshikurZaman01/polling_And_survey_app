@@ -5,18 +5,19 @@ import { AiFillDislike } from "react-icons/ai";
 
 const SurveyDetails = () => {
     const surveyData = useLoaderData();
-
     const { title, description, userName, userEmail, userPhoto, date } = surveyData || {};
     const [likeCount, setLikeCount] = useState(0);
     const [dislikeCount, setDislikeCount] = useState(0);
     const [likeDisabled, setLikeDisabled] = useState(false);
     const [dislikeDisabled, setDislikeDisabled] = useState(false);
 
+    const proUser = false;
+
+
     const handleLike = () => {
         setLikeCount(likeCount + 1);
         setDislikeDisabled(true);
     };
-
 
     const handleDislike = () => {
         setDislikeCount(dislikeCount + 1);
@@ -67,8 +68,21 @@ const SurveyDetails = () => {
                         </button>
                     </div>
                 </div>
-
             </div>
+
+            {
+                proUser ? <div className="my-5">
+                    <div className="flex flex-col">
+                        <textarea name="description" type="text" className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Write Comment..." />
+                    </div>
+                    <button className="btn btn-sm ">Add Comment</button>
+                </div>
+                    :
+                    <div className="my-5">
+                        <p className="text-gray-600 text-xs">Please be a <a href="#" className="text-blue-400">Pro User</a> to comment</p>
+                    </div>
+            }
+
         </div>
     );
 };

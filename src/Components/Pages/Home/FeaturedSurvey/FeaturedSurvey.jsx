@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 import SurveyCard from "../../Survey/SurveyCard";
 import { Link } from "react-router-dom";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const FeaturedSurvey = () => {
 
     const [surveys, setSurveys] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:3000/surveys')
-            .then(res => res.json())
-            .then(data => setSurveys(data))
-            .catch(err => console.log(err))
-    }, [])
+    const axiosSec = useAxiosSecure();
+    axiosSec.get('/surveys')
+        .then(res => {
+            setSurveys(res.data)
+        })
 
     return (
         <div className="w-[95%] mx-auto">

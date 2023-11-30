@@ -37,6 +37,8 @@ const Dashboard = () => {
 
                                 <li className="text-white"><NavLink to={'/dashboard/addSurvey'} >Add Survey</NavLink></li>
 
+                                <li className="text-white"><NavLink to={'/dashboard/manageSurvey'} >Manage Survey</NavLink></li>
+
                                 <li className="text-white"><NavLink to={'/dashboard/feedbackByUsers'} >Feedback By Users</NavLink></li>
 
                                 <li className="text-white"><NavLink to={'/dashboard/feedbackByAdmin'} >Feedback By Admin</NavLink></li>

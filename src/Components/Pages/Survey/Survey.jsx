@@ -114,7 +114,7 @@ const Survey = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
                 {filteredSurveys.map(survey => (
-                    <SurveyCard survey={survey} key={survey.id}></SurveyCard>
+                    <SurveyCard survey={survey} key={survey._id}></SurveyCard>
                 ))}
             </div>
         </div>
