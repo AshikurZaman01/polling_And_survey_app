@@ -43,6 +43,8 @@ const Dashboard = () => {
 
                                 <li className="text-white"><NavLink to={'/dashboard/feedbackByAdmin'} >Feedback By Admin</NavLink></li>
 
+                                <li className="text-white"><NavLink to={'/dashboard/proMemberShip'} >Pro Membership</NavLink></li>
+
                                 <li className="text-white"><NavLink to={'/dashboard/surveyResponseUsers'} >Survey Response</NavLink></li>
                             </ul>
                             {/* surveyers */}</>

@@ -29,6 +29,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SurveyDetails from './Components/Pages/Survey/SurveyDetails';
 import ManageSurvey from './Components/Pages/Dashboard/Surveyor/ManageSurvey';
 import UpdateSurveys from './Components/Pages/Dashboard/Surveyor/UpdateSurveys';
+import ProMembership from './Components/Pages/Dashboard/Surveyor/ProMembership';
 
 
 const router = createBrowserRouter([
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/feedbackByAdmin",
         element: <FeedbackByAdmin></FeedbackByAdmin>
+      },
+      {
+        path: "/dashboard/proMemberShip",
+        element: <ProMembership></ProMembership>
       },
       {
         path: "/dashboard/surveyResponseUsers",

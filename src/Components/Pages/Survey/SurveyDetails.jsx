@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { FcLike } from "react-icons/fc";
 import { AiFillDislike } from "react-icons/ai";
+import useAuth from "../../hooks/useAuth";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import toast from "react-hot-toast";
 
 const SurveyDetails = () => {
     const surveyData = useLoaderData();
-    const { title, description, userName, userEmail, userPhoto, date } = surveyData || {};
+    const { title, description, userName, userEmail, userPhoto, date, _id } = surveyData || {};
     const [likeCount, setLikeCount] = useState(0);
     const [dislikeCount, setDislikeCount] = useState(0);
     const [likeDisabled, setLikeDisabled] = useState(false);
     const [dislikeDisabled, setDislikeDisabled] = useState(false);
-
-    const proUser = false;
-
+    const [newComment, setNewComment] = useState("");
+    const { user } = useAuth();
+    const axiosSec = useAxiosSecure();
 
     const handleLike = () => {
         setLikeCount(likeCount + 1);
@@ -23,6 +26,41 @@ const SurveyDetails = () => {
         setDislikeCount(dislikeCount + 1);
         setLikeDisabled(true);
     };
+
+    const handleAddComment = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const commentText = formData.get("comment"); // Rename to avoid conflict with the state variable
+
+        console.log(commentText);
+
+        const newCommentData = {
+            surveyId: _id,
+            comment: commentText,
+            userPhoto,
+        };
+
+        const res = await axiosSec.post("/comments", newCommentData)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.insertedId) {
+                    toast.success("Comment Added");
+                }
+            });
+        e.target.reset()
+    };
+
+    const [comments, setComments] = useState([]);
+
+    const cc1 = axiosSec.get('/comments')
+        .then(res => {
+            const sur = res.data.filter(comment => comment.surveyId === _id);
+            setComments(sur);
+        })
+
+    console.log(comments)
+
 
     return (
         <div className="w-[80%] mx-auto my-10">
@@ -52,9 +90,7 @@ const SurveyDetails = () => {
                 </div>
                 <div className="flex justify-between gap-10 pt-10">
                     <div>
-                        <button className="btn btn-sm bg-red-300"
-                            onClick={handleLike}
-                            disabled={likeDisabled}>
+                        <button className="btn btn-sm bg-red-300" onClick={handleLike} disabled={likeDisabled}>
                             Like<FcLike />{likeCount}
                         </button>
                     </div>
@@ -70,19 +106,50 @@ const SurveyDetails = () => {
                 </div>
             </div>
 
-            {
-                proUser ? <div className="my-5">
-                    <div className="flex flex-col">
-                        <textarea name="description" type="text" className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Write Comment..." />
-                    </div>
-                    <button className="btn btn-sm ">Add Comment</button>
-                </div>
-                    :
+            {user ? (
+                <form onSubmit={handleAddComment}>
                     <div className="my-5">
-                        <p className="text-gray-600 text-xs">Please be a <a href="#" className="text-blue-400">Pro User</a> to comment</p>
+                        <div className="flex flex-col">
+                            <textarea
+                                name="comment"
+                                type="text"
+                                className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                                placeholder="Write Comment..."
+                                value={newComment}
+                                onChange={(e) => setNewComment(e.target.value)}
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-sm">
+                            Add Comment
+                        </button>
                     </div>
-            }
+                </form>
+            ) : (
+                <div className="my-5">
+                    <p className="text-gray-600 text-xs">
+                        Please be a <a href="#" className="text-blue-400">
+                            Pro User
+                        </a>{" "}
+                        to comment
+                    </p>
+                </div>
+            )}
 
+            {comments.length > 0 && (
+                <div className="mt-5">
+                    <h3 className="text-lg font-semibold mb-2">Comments</h3>
+                    <ul>
+                        {comments.map((comment, index) => (
+                            <li key={index} className="mb-2">
+                                <div className="flex gap-3 items-center">
+                                    <img className="w-10 h-10 rounded-full" src={comment.userPhoto} alt="" />
+                                    <p>{comment.comment}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };
