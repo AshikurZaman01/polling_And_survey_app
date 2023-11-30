@@ -17,6 +17,8 @@ const Dashboard = () => {
                         <ul className="menu">
                             <div><h1 className="text-white text-3xl uppercase text-center p-7">Admin Home</h1></div>
 
+                            <li className="text-white"><NavLink to={'/dashboard/adminHome'} >Admin Home</NavLink></li>
+
                             <li className="text-white"><NavLink to={'/dashboard/manageUsers'} >Manage Surveyor</NavLink></li>
 
                             <li className="text-white"><NavLink to={'/dashboard/surveyStatus'} >Survey Status</NavLink></li>
@@ -34,6 +36,8 @@ const Dashboard = () => {
 
                             <ul className="menu">
                                 <div><h1 className="text-white text-3xl uppercase text-center p-7">Surveyors Home</h1></div>
+
+                                <li className="text-white"><NavLink to={'/dashboard/surveyHome'} >Surveyor Home</NavLink></li>
 
                                 <li className="text-white"><NavLink to={'/dashboard/addSurvey'} >Add Survey</NavLink></li>
 

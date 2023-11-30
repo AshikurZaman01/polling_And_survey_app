@@ -30,8 +30,6 @@ const FeedbackByUsers = () => {
         fetchComments();
     }, [axiosSec, surveys]);
 
-    console.log(comments);
-
     return (
         <div>
             <div>
@@ -57,8 +55,6 @@ const FeedbackByUsers = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* row 1 */}
-
                                 {
                                     surveys.map(user => <tr key={user._id}>
 
@@ -91,22 +87,11 @@ const FeedbackByUsers = () => {
                                         </td>
                                     </tr>)
                                 }
-
-
-
-
-
                             </tbody>
-
-
                         </table>
                     </div>
                 </div>
-
             </div>
-
-
-
         </div>
     );
 };

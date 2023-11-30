@@ -30,6 +30,8 @@ import SurveyDetails from './Components/Pages/Survey/SurveyDetails';
 import ManageSurvey from './Components/Pages/Dashboard/Surveyor/ManageSurvey';
 import UpdateSurveys from './Components/Pages/Dashboard/Surveyor/UpdateSurveys';
 import ProMembership from './Components/Pages/Dashboard/Surveyor/ProMembership';
+import AdminHome from './Components/Pages/Dashboard/Admin/AdminHome';
+import SurveyorHome from './Components/Pages/Dashboard/Surveyor/SurveyorHome';
 
 
 const router = createBrowserRouter([
@@ -72,6 +74,10 @@ const router = createBrowserRouter([
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
+        path: "/dashboard/adminHome",
+        element: <AdminHome></AdminHome>
+      },
+      {
         path: "/dashboard/manageUsers",
         element: <ManageUsers></ManageUsers>
       },
@@ -88,6 +94,10 @@ const router = createBrowserRouter([
         element: <SurveyResponse></SurveyResponse>
       },
 
+      {
+        path: "/dashboard/surveyHome",
+        element: <SurveyorHome></SurveyorHome>
+      },
       {
         path: "/dashboard/addSurvey",
         element: <AddSurvey></AddSurvey>

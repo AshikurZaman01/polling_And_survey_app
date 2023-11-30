@@ -38,7 +38,7 @@ const SurveyDetails = () => {
         const newCommentData = {
             surveyId: _id,
             comment: commentText,
-            userPhoto,
+            userPhoto: user?.photoURL,
         };
 
         const res = await axiosSec.post("/comments", newCommentData)

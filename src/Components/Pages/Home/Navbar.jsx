@@ -4,12 +4,14 @@ import { AuthContext } from '../../Auth/AuthProvider';
 import toast from 'react-hot-toast';
 import { FiMenu } from "react-icons/fi";
 import { AiFillCloseCircle } from "react-icons/ai";
+import useAdmin from '../../hooks/useAdmin';
 
 const Navbar = () => {
 
     const location = useLocation()
     const navigate = useNavigate()
     const { user, logout } = useContext(AuthContext)
+    const [isAdmin] = useAdmin();
 
 
 
@@ -44,9 +46,19 @@ const Navbar = () => {
                     <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>How It Works</li>
                 </NavLink>
 
-                <NavLink to='/dashboard'>
-                    <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Dashboard</li>
-                </NavLink>
+
+
+                {
+                    user && !isAdmin && <><NavLink to="/dashboard/surveyHome">
+                        <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Surveyor Home</li>
+                    </NavLink></>
+                }
+
+                {
+                    user && isAdmin && <><NavLink to="/dashboard/adminHome">
+                        <li className='my-4 border-b border-slate-700 hover:bg-slate-600 hover:rounded'>Admin Home</li>
+                    </NavLink></>
+                }
 
 
 
@@ -130,18 +142,35 @@ const Navbar = () => {
                                     </NavLink>
                                 </li>
 
-                                <li className=" md:my-0">
-                                    <NavLink to={'/dashboard'} className={({ isActive, isPending }) =>
-                                        isActive
-                                            ? "text-sm text-white underline duration-500"
-                                            : isPending
-                                                ? "pending"
-                                                : ""
+                                {
+                                    user && isAdmin && <> <li className=" md:my-0">
+                                        <NavLink to={'/dashboard/adminHome'} className={({ isActive, isPending }) =>
+                                            isActive
+                                                ? "text-sm text-white underline duration-500"
+                                                : isPending
+                                                    ? "pending"
+                                                    : ""
 
-                                    }>
-                                        DASHBOARD
-                                    </NavLink>
-                                </li>
+                                        }>
+                                            ADMIN HOME
+                                        </NavLink>
+                                    </li></>
+                                }
+
+                                {
+                                    user && !isAdmin && <> <li className=" md:my-0">
+                                        <NavLink to={"/dashboard/surveyHome"} className={({ isActive, isPending }) =>
+                                            isActive
+                                                ? "text-sm text-white underline duration-500"
+                                                : isPending
+                                                    ? "pending"
+                                                    : ""
+
+                                        }>
+                                            SURVEYOR HOME
+                                        </NavLink>
+                                    </li></>
+                                }
 
 
 
