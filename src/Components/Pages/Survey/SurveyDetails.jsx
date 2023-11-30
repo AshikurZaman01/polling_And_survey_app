@@ -59,7 +59,6 @@ const SurveyDetails = () => {
             setComments(sur);
         })
 
-    console.log(comments)
 
 
     return (
