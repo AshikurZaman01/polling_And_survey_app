@@ -20,6 +20,7 @@ const AdminHome = () => {
         }
     })
 
+    console.log("admin ", data?.admin === user.displayName)
 
 
     return (
@@ -47,7 +48,24 @@ const AdminHome = () => {
                 </div>
             </div>
 
-            
+
+            <div className="w-[90%] mx-auto my-10">
+                <h1 className="text-4xl font-bold">Admin Details</h1>
+
+                <div className="my-5 border border-gray-400 p-5 rounded">
+
+                    <div className="w-[100px] h-[100px] rounded-full">
+                        <img className="rounded-full" src={data?.admin.image} alt="" />
+                    </div>
+                    <h1 className="text-2xl font-serif font-semibold"><span className="text-orange-400">Name</span> : <span className="text-gray-600">{data?.admin.name}</span></h1>
+
+                    <h1 className="text-2xl font-serif font-semibold"><span className="text-orange-400">Email</span> : <span className="text-gray-600">{data?.admin.email}</span></h1>
+
+                    <h1 className="text-2xl font-serif font-semibold"><span className="text-orange-400">Role</span> : <span className="text-gray-600 uppercase">{data?.admin.role}</span></h1>
+                </div>
+            </div>
+
+
 
         </div>
     );
